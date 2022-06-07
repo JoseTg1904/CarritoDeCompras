@@ -5,25 +5,24 @@ export class Articulo extends React.Component {
         const { articulo } = this.props
         const styles = {
             card: {
-                "border-style": "solid"
+                "borderStyle": "solid"
             },
             img: {
                 "width": "25%"
+            },
+            container: {
+                "padding": "2px 16px"
             }
         }
         
-        return (
-            <div 
-                key={articulo.articulo} 
-                id="card"
-                style={styles.card}
-            >
+        return (            
+            <div style={styles.card}>
                 <img 
                     src={articulo.foto} 
                     alt="foto"
                     style={styles.img}
                 />
-                <div id="container">
+                <div style={styles.container}>
                     <h3><b>{articulo.nombre}</b></h3>
                     <h4>{articulo.descripcion}</h4>
                     <p>Q {articulo.precio}</p>
