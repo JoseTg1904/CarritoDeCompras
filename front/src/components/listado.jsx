@@ -14,11 +14,12 @@ export function Listado() {
     }, [])
 
     const getArticles = async() => {
-        await fetch('http://localhost:3500/articulos', {
+        await fetch('http://back:3500/articulos', {
             method: 'GET',
         })
         .then(response => response.json())
         .then(json => {
+            json.sort(function(a, b){ return a.precio - b.precio })
             setArticulos(json)
             setArticulos2(json)
         })
@@ -67,7 +68,7 @@ export function Listado() {
                 />
             </label>
             { articulos && articulos.map((articulo) => (
-                <Articulo key={articulo.articulo} articulo={articulo} />
+                <Articulo key={articulo.articulo} articulo={articulo}/>
             ))}
         </div>
     )

@@ -1,9 +1,9 @@
 const sql = require('mssql')
 
 const config = {
-    user: "sa",
-    password: "12345",
-    server: "localhost",
+    user: process.env.USER || "sa",
+    password: process.env.PASSWORD || "12345",
+    server: process.env.SERVER || "192.168.1.24",
     database: "articulosReact",
     options: {
         trustServerCertificate: true
