@@ -24,7 +24,7 @@ export class Formulario extends React.Component {
     }
 
     async handleSubmit(event) {
-        await fetch('http://back:3500/articulo/crear', {
+        await fetch('http://localhost:3500/articulo/crear', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

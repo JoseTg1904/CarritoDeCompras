@@ -14,7 +14,7 @@ export function Listado() {
     }, [])
 
     const getArticles = async() => {
-        await fetch('http://back:3500/articulos', {
+        await fetch('http://localhost:3500/articulos', {
             method: 'GET',
         })
         .then(response => response.json())
