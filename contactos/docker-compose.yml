@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  back:
+    build: ./back
+    ports:
+      - 3500:3500
+  front:
+    build: ./front
+    ports:
+      - 3000:3000
+    environment:
+      - name=value

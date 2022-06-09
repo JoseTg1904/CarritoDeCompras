@@ -9,7 +9,7 @@ export function Barra() {
     return (
         <Fragment>
             <Router>
-                <ul>
+                <ul className="topnav">
                     <li><Link to="/">Listado</Link></li>
                     <li><Link to="/crear">Crear</Link></li>
                     <li><Link to="/carrito">Carrito</Link></li>
